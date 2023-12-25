@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login and Registration</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .container {
+            background: #ECF0F1;
+            height: 100vh; /* Full height of the viewport */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column; /* Align content vertically */
+        }
+
+        .inner-container {
+            position: relative;
+            width: 100%;
+            background: #EDEDED;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            border-radius: 36px;
+            padding: 30px;
+            box-sizing: border-box;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        .logo {
+            width: 100px; /* Adjust the width as needed */
+            height: auto;
+            margin-top: 100px;
+        }
+
+        .login-btn,
+        .register-btn,
+        .title,
+        .email,
+        .password,
+        .forgot-password,
+        .remember-me,
+        .image {
+            width: 100%;
+            max-width: 400px; /* Adjust the maximum width as needed */
+            margin: 10px auto;
+        }
+
+        .login-btn,
+        .register-btn {
+            background-color: #2C3E50;
+            color: #D3CBCB;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 24px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+        }
+
+        .title {
+            font-size: 24px;
+            font-weight: 700;
+            color: #000000;
+            text-align: center;
+        }
+
+        .email,
+        .password {
+            background-color: #ECF0F1;
+            border-radius: 5px;
+            border: 0.5px solid #7F8C8D;
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            width: 380px;
+        }
+
+        .email .field-label,
+        .password .field-label {
+            flex: 1;
+            color: #7F8C8D;
+            font-size: 24px;
+            font-family: Arial;
+            font-weight: 700;
+            word-wrap: break-word;
+        }
+
+        .email-input,
+        .password-input {
+            border: none;
+            background: none;
+            outline: none;
+            padding: 5px;
+            flex: 2;
+        }
+
+        .input-icon,
+        .password-icon {
+            width: 32px;
+            height: 32px;
+            margin-left: 5px;
+        }
+
+        .forgot-password {
+            color: #3498DB;
+            font-weight: 700;
+            cursor: pointer;
+            text-align: center;
+            font-size: 16px;
+            margin-left: 100px;
+            margin-bottom: 20px;
+            
+        }
+
+        .remember-me {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+            color: #333333;
+            margin-right: 333px;
+            margin-top: 30px;
+            
+        }
+
+        .remember-me .icon {
+            width: 24px;
+            height: 24px;
+            margin-right: 10px;
+            background: #3498DB;
+        }
+
+        .remember-me .remember-me-text {
+            font-weight: 700;
+            word-wrap: break-word;
+        }
+
+        .forgot-remember-container {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <img src="Picture1.png" alt="Logo" class="logo">
+        <div class="title">LOGIN & REGISTRATION</div>
+        <div class="inner-container">
+
+      
+
+            <div class="email">
+                <div class="icon">
+                    <div></div>
+                </div>
+                <img src="email-icon.png" alt="Icon" class="input-icon">
+                <input type="email" class="email-input" placeholder="Email">
+                
+            </div>
+
+            <div class="password">
+                <div class="icon">
+                    <div></div>
+                </div>
+                <img src="password-icon.png" alt="Icon" class="password-icon">
+                <input type="password" class="password-input" placeholder="Password">
+                
+            </div>
+            <button type="submit" class="login-btn">
+                <div>Login</div>
+            </button>
+
+            <button type="submit" class="register-btn">
+                <div>Register</div>
+            </button>
+            <div class="remember-me">
+                <img src="tick-icon.png" alt="tick"> <div class="remember-me-text">Remember me</div>
+                <div>
+            <div class="forgot-remember-container">
+                <div class="forgot-password">Forgot Password?</div>
+                
+                        <div></div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+
+</html>
