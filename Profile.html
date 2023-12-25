@@ -238,6 +238,23 @@
   width: 50px;
   background: none;
 }
+.home-section{
+  position: relative;
+  background:#ECF0F1;
+
+  min-height: 100vh;
+  top: 0;
+  left: 78px;
+  width: calc(100% - 78px);
+  transition: all 0.5s ease;
+  z-index: 2;
+}
+.sidebar.open ~ .home-section{
+  left: 250px;
+  width: calc(100% - 250px);
+  background:#ECF0F1;
+
+}
 .home-section .text{
   display: inline-block;
   color: #2C3E50;
@@ -306,25 +323,6 @@ header {
         }
  
 
-      .img-users-startups{
-        width: 90px;
-        height: 30px;
-        margin-left: 150px;
-      }
-      .img-Messages{
-        width: 90px;
-        height: 30px;
-        
-        margin-left: 330px;
-      }
-      .img-Notifcations{
-       
-        width: 90px;
-        height: 30px;
-       
-        margin-left: 380px;
-      }
-    
       .link-list {
   list-style: none;
   padding: 0;
@@ -336,143 +334,176 @@ header {
   margin-right: 10px; /* Adjust as needed for spacing between items */
 }
 
-      @media screen and (max-width: 620px) {
-  
-  .img-users-startups,
-  .img-Messages,
-  .img-Notifcations {
-    margin: 5px;
-    margin-left: 90px;
-    width: 70px;
-    height: 30px
+.item {
+    margin-left: 260px;
+    position: fixed; list-style-type: none;
     
-  }
-
-  .img-Messages {
-    margin-top: 20px; 
-  }
-
-  .img-Notifcations {
-    margin-top: 20px; 
-  }
 }
 
-        @media screen and (max-width: 620px) {
-            header img {
+.item p {
+   margin-top: 30px;
+   font-family: Arial, Helvetica, sans-serif;
+    
+}
+
+.item input {
+    width: 420px;
+    margin-top: 20px;
+    height: 30px;
+}
+
+.item p.marginTop {
+    margin-top: 20px;
+}
+
+.item a img {
+    width: 50px;
+    margin-top: 20px;
+}
+
+  
+
+        @media screen and (max-width: 680px) {
+            .img-UserName {
                 margin: 0 auto; /* Center the image on smaller screens */
                 display: block;
+                
+
             }
         }
-@media only screen and (max-width: 620px) {
+@media only screen and (max-width: 680px) {
   /* For mobile phones: */
   .menu, .main, .right {
     width: 100%;
   }
+ 
+  
+  @media screen and (max-width: 680px) {
+  .item p,
+  .item input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 0;
+   
+    
+  }
+
+  .item a img {
+    width: 50px;
+    margin-top: 0;
+  }
 }
 
-    
+
 </style>
 </head>
 <body >
 
 
-    <header>
-       <img  src="Picture1.png" style="margin-left: 80px;width: 140px;">
-        <a href="#"><img src="Profile-setting.png" alt="Logo" style="width: 140px;"></a>
-    </header>
-    <div class="sidebar">
-      <div class="logo-details">
-        <i class='bx bxl-c-plus-plus icon'></i>
-          <div class="logo_name">CodingLab</div>
-          <i class='bx bx-menu' id="btn" ></i>
-      </div>
-      <ul class="nav-list">
-      
-        <li>
-          <a href="#">
-            <i class='bx bx-grid-alt'></i>
-            <span class="links_name">Dashboard</span>
-          </a>
-           <span class="tooltip">Dashboard</span>
-        </li>
-        <li>
-         <a href="#">
-           <i class='bx bx-user' ></i>
-           <span class="links_name">Profile</span>
-         </a>
-         <span class="tooltip">Profile</span>
-       </li>
-       <li>
-         <a href="#">
-           <i class='bx bx-skip-previous' ></i>
-           <span class="links_name">My Startup</span>
-         </a>
-         <span class="tooltip">My Startup</span>
-       </li>
-       <li>
-         <a href="#">
-           <i class='bx bx-skip-next' ></i>
-           <span class="links_name">My Startups</span>
-         </a>
-         <span class="tooltip">My Startups</span>
-       </li>
-       <li>
-         <a href="#">
-          <i class='bx bx-chat' style='color:#fffcfc'  ></i>
-           <span class="links_name">Message/span>
-         </a>
-         <span class="tooltip">Messages</span>
-       </li>
-       <li>
-         <a href="#">
-          <i class='bx bxs-vector' style='color:#fffcfc' ></i>
-           <span class="links_name">Job Posts</span>
-         </a>
-         <span class="tooltip">Job Posts</span>
-       </li>
-       <li>
-         <a href="#">
-          <i class='bx bx-calendar-check'></i>
-           <span class="links_name">Events</span>
-         </a>
-         <span class="tooltip">Events</span>
-       </li>
-       <li>
-         <a href="#">
-          <i class='bx bxl-git' style='color:#fdf8f8'  ></i>
-           <span class="links_name">OSH</span>
-         </a>
-         <span class="tooltip">OSH</span>
-       </li>
-       <li><a href="#">
-          <i class='bx bx-log-out'></i>
-           <span class="links_name">Logout</span>
-         </a>
-         <span class="tooltip">Logout</span>
-       </li>
-      </ul>
-    </div>
+    
+  <header>
+    <img  src="Frame 27 (1).png" style="margin-left: 80px;width: 140px;">
+     <a href="#"><img class="img-UserName"  src="Frame 28 (1).png" alt="Logo" style="width: 140px;"></a>
+ </header>
 
- <div class="link-item">
-  <ul class="link-list">
-    <li>
-      <a href="#">
-        <img class="img-users-startups" src="Frame 104.png">
-      </a>
-    </li>
-    <li>
-      <a href="#">
-        <img class="img-Messages" src="Frame 103.png">
-      </a>
-    </li>
-    <li>
-      <a href="#">
-        <img class="img-Notifcations" src="Frame 102.png">
-      </a>
-    </li>
-  </ul>
-  
+<div style="overflow:auto">
+  <div class="sidebar">
+    <div class="logo-details">
+    
+        <img src="Group 17.png" style="width: 50px; margin-right: 20px;margin-top: 50px;">
+        <i class='bx bx-menu' id="btn" ></i>
+    </div>
+    
+    <ul class="nav-list">
+    
+      <li>
+        <a href="#">
+          <i class='bx bxs-dashboard' style='color:#ffffff'  ></i>
+          <span class="links_name">Dashboard</span>
+        </a>
+         <span class="tooltip">Dashboard</span>
+      </li>
+      <li>
+       <a href="#">
+         <i class='bx bx-user' ></i>
+         <span class="links_name">Profile</span>
+       </a>
+       <span class="tooltip">Profile</span>
+     </li>
+     <li>
+       <a href="#">
+         <i class='bx bx-skip-previous' ></i>
+         <span class="links_name">My Startup</span>
+       </a>
+       <span class="tooltip">My Startup</span>
+     </li>
+     <li>
+       <a href="#">
+         <i class='bx bx-skip-next' ></i>
+         <span class="links_name">My Startups</span>
+       </a>
+       <span class="tooltip">My Startups</span>
+     </li>
+     <li>
+       <a href="#">
+        <i class='bx bx-chat' style='color:#fffcfc'  ></i>
+         <span class="links_name">Message</span>
+       </a>
+       <span class="tooltip">Messages</span>
+     </li>
+     <li>
+       <a href="#">
+        <i class='bx bxs-vector' style='color:#fffcfc' ></i>
+         <span class="links_name">Job Posts</span>
+       </a>
+       <span class="tooltip">Job Posts</span>
+     </li>
+     <li>
+       <a href="#">
+        <i class='bx bx-calendar-check'></i>
+         <span class="links_name">Events</span>
+       </a>
+       <span class="tooltip">Events</span>
+     </li>
+     <li>
+       <a href="#">
+        <i class='bx bxl-git' style='color:#fdf8f8'  ></i>
+         <span class="links_name">OSH</span>
+       </a>
+       <span class="tooltip">OSH</span>
+     </li>
+     <li><a href="#">
+        <i class='bx bx-log-out'></i>
+         <span class="links_name">Logout</span>
+       </a>
+       <span class="tooltip">Logout</span>
+      
+     </li>
+    </ul>
+    
+  </div>
+  <div class="item">
+    <div class="form-item">
+        <p>Bio</p>
+        <input type="text">
+    </div>
+    <div class="form-item marginTop">
+        <p>Startup Details</p>
+        <input class="text" type="text">
+    </div>
+    <div class="form-item marginTop">
+        <p>Achievements</p>
+        <input type="text">
+    </div>
+    <div class="form-item marginTop">
+        <p>Profile Picture</p>
+        <div class="image-container">
+            <a href="#"><img src="Profile Picture.png" alt="Profile Picture"></a>
+        </div>
+    </div>
 </div>
+
+
 
 
 <script>
@@ -503,4 +534,3 @@ header {
 </body>
 
 </html>
-
